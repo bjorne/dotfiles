@@ -27,11 +27,15 @@ namedir () { $1=$PWD ;  : ~$1 }
 autoload -U colors
 colors
 
+prompt_end="%#"
+if [[ $UID == 0 ]] then
+   prompt_end="%{$fg[red]%}%#%{$reset_color%}"
+fi
+
 if [[ -n $SSH_CLIENT || -n $REMOTEHOST ]] then
-    echo "we are here"
-    PS1="[%n@%{$bold_color$fg[red]%}%m%{$reset_color%}:%~]%# "
+    PS1="[%{$bold_color$fg[red]%}%m%{$reset_color%}.%{$bold_color$fg[yellow]%}%n%{$reset_color%}:%~]$prompt_end "
 else
-    PS1="[%{$bold_color$fg[red]%}%m%{$reset_color%}:%~]%# "
+    PS1="[%{$bold_color$fg[yellow]%}%n%{$reset_color%}:%~]$prompt_end "
 fi
 RPROMPT='%t %w' 
 
