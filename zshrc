@@ -41,6 +41,7 @@ RPROMPT='%t %w'
 
 # End of prompt
 
-# 
+# Fink setup
+test -r /sw/bin/init.sh && . /sw/bin/init.sh 
 
 export EDITOR="emacs"
