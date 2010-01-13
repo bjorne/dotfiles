@@ -1,3 +1,7 @@
+# LOCAL CONFIG GOES HERE
+
+# DO NOT EDIT BELOW THIS LINE
+
 [color]
   ui = auto
 [color "branch"]
