@@ -4,7 +4,7 @@ ZSH_DIR=$HOME/.zsh
 for config_file ($ZSH_DIR/lib/*.zsh) source $config_file
 
 # Set up prompt
-source $HOME/.zsh/prompt.zsh
+source $ZSH_DIR/prompt.zsh
 
 # Local config
-source $HOME/.zsh/local.zsh
+source $ZSH_DIR/local.zsh
