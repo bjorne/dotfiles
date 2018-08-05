@@ -1,2 +1,2 @@
 stow:
-	stow zsh && touch $@
+	stow zsh emacs && touch $@
